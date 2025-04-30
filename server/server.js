@@ -23,7 +23,7 @@ app.get('/',(req,res)=>{
 });
 
 // Registration Route
-app.post('/register', async (req, res) => {
+app.post('/api/register', async (req, res) => {
   const { username, email, password, confirmPassword } = req.body;
   if (!username || !email || !password || !confirmPassword) {
     return res.status(400).json({ message: 'All fields are required.' });
